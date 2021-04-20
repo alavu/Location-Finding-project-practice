@@ -16,13 +16,17 @@
 	<th>Code</th>
 	<th>Name</th>
 	<th>Type</th>
+	<th>Delete</th>
+	<th>Update</th>
 </tr>
 <c:forEach items="${locations}" var="location">
 <tr>
-	<th>${location.id }</th>
-	<th>${location.code }</th>
-	<th>${location.name }</th>
-	<th>${location.type }</th>
+	<td>${location.id }</td>
+	<td>${location.code }</td>
+	<td>${location.name }</td>
+	<td>${location.type }</td>
+	<td><a href="deleteLocation?id=${location.id }">delete</a></td>
+		<td><a href="updateLocation?id=${location.id }">update</a></td>
 </tr>
 </c:forEach>
 </table>
